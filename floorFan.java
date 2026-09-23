@@ -2,10 +2,7 @@ public class floorFan extends fan {
     protected boolean isOscillating;
     protected int timer;
 
-    public floorFan(int speedSetting, boolean isOn, boolean isOscillating, int timer) {
-        super(speedSetting, isOn);
-        this.isOscillating = isOscillating;
-        this.timer = timer;
+    public floorFan() {
     }
 
     protected void setOscillation(boolean isOscillating) {

@@ -5,11 +5,7 @@ public class fan {
     protected boolean isOn;
     protected deviceStatus status;
 
-    public fan(int speedSetting, boolean isOn, deviceStatus status) {
-        fans = new ArrayList<Integer>();
-        this.speedSetting = speedSetting;
-        this.isOn = isOn;
-        this.status = status;
+    public fan() {
     }
 
     protected void setSpeedSetting(int speed) {
@@ -34,6 +30,9 @@ public class fan {
         return this.status;
     }
 
+    /**
+     * If the fan is unavailable or off, then it will set the STATUS to off
+     */
     protected void turnOff() {
         if (this.status == deviceStatus.UNAVAILABLE || this.status == deviceStatus.OFF) {
             isOn = false;
